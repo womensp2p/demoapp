@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <div class="row">
+        {% if replies %}
+            {% for reply in replies %}
+            <div class="well well-large">
+                <div>{{reply}}</div>
+            </div>
+            {% endfor %}
+        {% else %}
+
+            <div class="well well-large">
+                Sorry, no replies 😥
+            </div>
+
+        {% endif %}
+        </div>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+{% endblock %}
